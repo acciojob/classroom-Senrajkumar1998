@@ -33,4 +33,10 @@ public class Student {
     public void setAverageScore(double averageScore) {
         this.averageScore = averageScore;
     }
+    public boolean compareTo(Student s2){
+        if(this.getAge() != s2. getAge()) return false;
+        if(!this.getName().equals(s2.getName())) return false;
+        if(this.getAverageScore() != s2.getAverageScore()) return false;
+        return true;
+    }
 }
