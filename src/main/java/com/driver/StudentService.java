@@ -9,6 +9,7 @@ import java.util.List;
 public class StudentService {
     @Autowired
     StudentRepository studentRepository;
+
     public void addStudent(Student student){
         studentRepository.addStudent(student);
     }
@@ -18,14 +19,15 @@ public class StudentService {
     public void addStudentTeacherPair(String studentName,String teacherName){
         studentRepository.addStudentTeacherPair(studentName,teacherName);
     }
+
     public Student getStudentByName(String studentName){
-       return studentRepository.getStudentByName(studentName);
+        return studentRepository.getStudentByName(studentName);
     }
     public Teacher getTeacherByName(String teacherName){
-      return studentRepository.getTeacherByName(teacherName);
+        return studentRepository.getTeacherByName(teacherName);
     }
     public List<String> getStudentsByTeacherName(String teacherName){
-        return studentRepository.getStudentsByTeacherName(teacherName);
+        return studentRepository.getStudentByTeacherName(teacherName);
     }
     public List<String> getAllStudents(){
         return studentRepository.getAllStudents();
